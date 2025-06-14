@@ -1,0 +1,16 @@
+<%- include("partials/header") %>
+<link rel="stylesheet" href="/css/home.css">
+<div class="container mt-5">
+  <h1 class="text-center mb-4">🌦️ WeatherWise</h1>
+
+  <form action="/weather" method="POST" class="mb-4 text-center">
+    <input type="text" name="city" placeholder="Enter city name" required class="form-control w-50 mx-auto mb-3" />
+    <button type="submit" class="btn btn-primary">Get Weather</button>
+  </form>
+
+  <% if (error) { %>
+    <div class="alert alert-danger text-center"><%= error %></div>
+  <% } %>
+</div>
+
+<%- include("partials/footer") %>

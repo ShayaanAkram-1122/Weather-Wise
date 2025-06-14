@@ -1,0 +1,36 @@
+<%- include("partials/header") %>
+<link rel="stylesheet" href="/css/weather.css">
+
+<div class="container mt-5">
+  <h1 class="text-center mb-4">🌍 Weather Results</h1>
+
+  <% if (weather) { %>
+    <div class="card mb-4">
+      <div class="card-body text-center">
+        <h2>Current Weather in <%= weather.city %></h2>
+        <img src="https://openweathermap.org/img/wn/<%= weather.icon %>@2x.png" alt="Weather Icon">
+        <p><strong>Temperature:</strong> <%= weather.temperature %>°C</p>
+        <p><strong>Description:</strong> <%= weather.description %></p>
+        <p><strong>Humidity:</strong> <%= weather.humidity %>%</p>
+        <p><strong>Wind Speed:</strong> <%= weather.wind %> m/s</p>
+      </div>
+    </div>
+  <% } %>
+
+  <% if (forecast) { %>
+    <div class="card text-center">
+      <div class="card-body">
+        <h3>Tomorrow's Forecast (12:00 PM)</h3>
+        <p><strong>Temperature:</strong> <%= forecast.temperature %>°C</p>
+        <p><strong>Description:</strong> <%= forecast.description %></p>
+        <p><strong>Rain Expected?</strong> <%= forecast.rainExpected ? "Yes ☔" : "No ☀️" %></p>
+      </div>
+    </div>
+  <% } %>
+
+  <div class="text-center mt-4">
+    <a href="/" class="btn btn-secondary">🔁 Check Another City</a>
+  </div>
+</div>
+
+<%- include("partials/footer") %>

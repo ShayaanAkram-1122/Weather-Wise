@@ -1,0 +1,22 @@
+<%- include("partials/header") %>
+<link rel="stylesheet" href="/forecast.css">
+
+<div class="container mt-5">
+  <h2 class="mb-5 text-center">🌎 Global Forecasts</h2>
+  <div class="row">
+    <% forecasts.forEach(city => { %>
+      <div class="col-md-4 mb-4">
+        <div class="card weather-card shadow-sm">
+          <div class="card-body text-center">
+            <h5 class="card-title"><%= city.name %></h5>
+            <img src="https://openweathermap.org/img/wn/<%= city.icon %>@2x.png" alt="Icon" class="weather-icon">
+            <p class="temp"><%= city.temp %>°C</p>
+            <p class="description"><%= city.description %></p>
+          </div>
+        </div>
+      </div>
+    <% }); %>
+  </div>
+</div>
+
+<%- include("partials/footer") %>
