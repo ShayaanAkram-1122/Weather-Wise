@@ -1,6 +1,3 @@
-Absolutely! Here's a clean, student-friendly `README.md` tailored for your **WeatherWise** project as a 4th semester full-stack web development student.
-
----
 
 ### ✅ `README.md`
 
