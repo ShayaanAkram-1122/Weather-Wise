@@ -6,7 +6,7 @@ import { dirname, join } from 'path';
 
 const app = express();
 const port = 3000;
-const apiKey = "125f5dbccf39a920f5259c6f95570a56";
+const apiKey = ""; //use your own API key by logging in the link given in the readme 
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
