@@ -9,7 +9,6 @@
 - 🔍 Search for any city's weather  
 - 📅 See current weather and tomorrow's forecast at 12:00 PM  
 - 🌍 Forecast page for popular global cities  
-- 🧑 About page with project and developer info  
 
 ---
 
